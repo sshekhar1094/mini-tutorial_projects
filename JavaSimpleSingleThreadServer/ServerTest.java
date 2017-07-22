@@ -30,6 +30,14 @@ public class ServerTest {
 			// Get the client message
 			while((line = br.readLine()) != null)
 				System.out.println(line);
+
+			//The following lines send a response back to teh browser. This for example send stodays date
+			/*
+			System.out.println("Return response");
+			Date today = new Date();
+			String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
+			clientSocket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
+			*/
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
