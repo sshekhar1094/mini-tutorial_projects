@@ -9,6 +9,8 @@ public class ServerTest {
 	/**
 	 * This class creates a basic single threaded server
 	 * Since its single threaded it wil lconnect to only one client at a time
+	 * Run this program and then
+	 * Either run the ClientTest.java program or load localhost:8080 on browser 
 	 */
 	
 	private static ServerSocket serverSocket;
