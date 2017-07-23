@@ -37,6 +37,7 @@ public class MultiThreadedServer implements Runnable {
 				// We r closing the client on receiving "stop". So thn close this thread as well
 				if(line.equals("stop") == true) return;
 			}
+			br.close();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

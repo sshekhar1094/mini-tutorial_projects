@@ -15,19 +15,18 @@ public class ClientTest {
 	
 	public static void main(String[] args) {
 		String line = "";
-		try {
+		try(pr = new PrintWriter(socket.getOutputStream(), true); 
+			Scanner scan = new Scanner(System.in) ) {
+			
 			socket = new Socket("localhost", 8080);
-			pr = new PrintWriter(socket.getOutputStream(), true);
 			pr.println("Hello Socket");
 			pr.println("Booooooooyyeeeaaaahhhh");
 			
-			Scanner scan = new Scanner(System.in);
 			System.out.println("Enter stop to exit!!!");
 			while(line.equals("stop") == false) {
 				line = scan.nextLine();
 				pr.println(line);
 			}
-			scan.close();
 		} 
 		catch (UnknownHostException e) {
 			e.printStackTrace();

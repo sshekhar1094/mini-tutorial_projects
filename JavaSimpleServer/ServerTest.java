@@ -40,6 +40,7 @@ public class ServerTest {
 			String httpResponse = "HTTP/1.1 200 OK\r\n\r\n" + today;
 			clientSocket.getOutputStream().write(httpResponse.getBytes("UTF-8"));
 			*/
+			br.close();
 			
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
